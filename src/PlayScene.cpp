@@ -79,7 +79,7 @@ void PlayScene::GUI_Function()
 	// See examples by uncommenting the following - also look at imgui_demo.cpp in the IMGUI filter
 	//ImGui::ShowDemoWindow();
 
-	ImGui::Begin("GAME3001 - Lab 3", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
+	ImGui::Begin("GAME3001 - Lab 4", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
 
 	static bool isGridEnabled = false;
 	if (ImGui::Checkbox("Grid Enabled", &isGridEnabled))
@@ -115,21 +115,29 @@ void PlayScene::GUI_Function()
 }
 
 
-	// create references for each tile to its neighbours
 	
 
-void PlayScene::m_setGridEnabled(bool state) 
+
+
+void PlayScene::m_buildGrid()
 {
-	for (auto tile : m_pGrid)
-	{
-		tile->setEnabled(state);
-	}
+	auto tileSize = Config::TILE_SIZE;
 
-	if(state == false)
+	// add tiles to the grid
+	for (int row = 0; row < Config::ROW_NUM; ++row)
 	{
-		SDL_RenderClear(Renderer::Instance()->getRenderer());
+		for (int col = 0; col < Config::COL_NUM; ++col)
+		{
+			Tile* tile = new Tile(); // create empty tile
+			tile->getTransform()->position = glm::vec2(col * tileSize, row * tileSize);
+			tile->setGridPosition(col, row);
+			addChild(tile);
+			tile->addLabels();
+			tile->setEnabled(false);
+			m_pGrid.push_back(tile);
+		}
 	}
-
+	// create references for each tile to its neighbours
 	for (int row = 0; row < Config::ROW_NUM; ++row)
 	{
 		for (int col = 0; col < Config::COL_NUM; ++col)
@@ -180,6 +188,21 @@ void PlayScene::m_setGridEnabled(bool state)
 
 	std::cout << m_pGrid.size() << std::endl;
 }
+
+void PlayScene::m_setGridEnabled(bool state)
+{
+	for (auto tile : m_pGrid)
+	{
+		tile->setEnabled(state);
+		tile->setLabelsEnabled(state);
+	}
+
+	if (state == false)
+	{
+		SDL_RenderClear(Renderer::Instance()->getRenderer());
+	}
+}
+
 
 Tile* PlayScene::m_getTile(const int col, const int row)
 {
