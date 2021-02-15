@@ -4,9 +4,6 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{5815f7db-2606-4a9a-bb95-88dfabdda6c1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game Objects">
-      <UniqueIdentifier>{4df01ff0-0e04-4c4d-ac5d-b7efa07fd705}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Managers">
       <UniqueIdentifier>{51ce5c17-6a00-499a-87ee-383140ca7329}</UniqueIdentifier>
     </Filter>
@@ -31,6 +28,12 @@
     <Filter Include="DOCS">
       <UniqueIdentifier>{a44d29c3-2835-4901-a310-0039121b84b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Navigation">
+      <UniqueIdentifier>{bc254bcc-9fec-44bd-9d35-4978c7c24ded}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Navigation\Game Objects">
+      <UniqueIdentifier>{4df01ff0-0e04-4c4d-ac5d-b7efa07fd705}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\StartScene.cpp">
@@ -52,7 +55,7 @@
       <Filter>Managers</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Player.cpp">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\PlayScene.cpp">
       <Filter>Scenes</Filter>
@@ -64,10 +67,10 @@
       <Filter>UI Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ship.cpp">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Target.cpp">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Renderer.cpp">
       <Filter>Singletons</Filter>
@@ -106,7 +109,7 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Plane.cpp">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\include\IMGUI_SDL\imgui_sdl.cpp">
       <Filter>IMGUI</Filter>
@@ -124,13 +127,13 @@
       <Filter>IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\SpaceShip.cpp">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Obstacle.cpp">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Tile.cpp">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -159,7 +162,7 @@
       <Filter>Enums</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Player.h">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\PlayerAnimationState.h">
       <Filter>Enums</Filter>
@@ -183,10 +186,10 @@
       <Filter>UI Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ship.h">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Target.h">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Transform.h">
       <Filter>Components</Filter>
@@ -240,7 +243,7 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Plane.h">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\SoundType.h">
       <Filter>Enums</Filter>
@@ -267,13 +270,16 @@
       <Filter>IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\SpaceShip.h">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Obstacle.h">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation\Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Tile.h">
-      <Filter>Game Objects</Filter>
+      <Filter>Navigation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\NeighbourTile.h">
+      <Filter>Enums</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
