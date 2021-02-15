@@ -1,7 +1,9 @@
 #include "Tile.h"
 
+#include <iomanip>
+#include <sstream>
+
 #include "Config.h"
-#include "Label.h"
 #include "TextureManager.h"
 #include "Util.h"
 
@@ -10,6 +12,7 @@ Tile::Tile() :m_cost(0.0f)
 	setWidth(Config::TILE_SIZE);
 	setHeight(Config::TILE_SIZE);
 }
+
 Tile::~Tile()
 = default;
 
@@ -26,12 +29,12 @@ void Tile::clean()
 {
 }
 
-Tile* Tile::getNeighbourTile(NeighbourTile position)
+Tile* Tile::getNeighbourTile(const NeighbourTile position)
 {
-return m_neighbours[position];
+	return m_neighbours[position];
 }
 
-void Tile::setNeighbourTile(NeighbourTile position, Tile* tile)
+void Tile::setNeighbourTile(const NeighbourTile position, Tile * tile)
 {
 	m_neighbours[position] = tile;
 }
@@ -46,11 +49,15 @@ void Tile::setTileCost(const float cost)
 	m_cost = cost;
 
 	// format string to 1 decimal place
+	std::stringstream stream;
+	stream << std::fixed << std::setprecision(1) << cost;
+	const std::string cost_string = stream.str();
 
+	m_costLabel->setText(cost_string);
 }
+
 void Tile::addLabels()
 {
-
 	auto offset = glm::vec2(Config::TILE_SIZE * 0.5f, Config::TILE_SIZE * 0.5f);
 
 	m_costLabel = new Label("99.9", "Consolas", 12);
@@ -68,5 +75,14 @@ void Tile::setLabelsEnabled(const bool state)
 {
 	m_costLabel->setEnabled(state);
 	m_statusLabel->setEnabled(state);
+}
 
+glm::vec2 Tile::getGridPosition() const
+{
+	return m_gridPosition;
+}
+
+void Tile::setGridPosition(const float col, const float row)
+{
+	m_gridPosition = glm::vec2(col, row);
 }

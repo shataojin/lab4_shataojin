@@ -4,20 +4,21 @@
 #include "DisplayObject.h"
 #include "Label.h"
 #include "NeighbourTile.h"
+
 class Tile : public DisplayObject
 {
 public:
 	// Constructor
 	Tile();
-	
+
 	// Destructor
 	~Tile();
-	
+
 	// Life-Cycle Functions
 	void draw() override;
 	void update() override;
 	void clean() override;
-	
+
 	Tile* getNeighbourTile(NeighbourTile position);
 	void setNeighbourTile(NeighbourTile position, Tile* tile);
 
@@ -40,6 +41,5 @@ private:
 
 	glm::vec2 m_gridPosition;
 };
-
 
 #endif /* defined (__TILE__) */

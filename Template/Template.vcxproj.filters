@@ -31,7 +31,7 @@
     <Filter Include="Navigation">
       <UniqueIdentifier>{bc254bcc-9fec-44bd-9d35-4978c7c24ded}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Navigation\Game Objects">
+    <Filter Include="Game Objects">
       <UniqueIdentifier>{4df01ff0-0e04-4c4d-ac5d-b7efa07fd705}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -55,7 +55,7 @@
       <Filter>Managers</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Player.cpp">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\PlayScene.cpp">
       <Filter>Scenes</Filter>
@@ -67,10 +67,10 @@
       <Filter>UI Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ship.cpp">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Target.cpp">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Renderer.cpp">
       <Filter>Singletons</Filter>
@@ -109,7 +109,7 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Plane.cpp">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\include\IMGUI_SDL\imgui_sdl.cpp">
       <Filter>IMGUI</Filter>
@@ -127,10 +127,10 @@
       <Filter>IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\SpaceShip.cpp">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Obstacle.cpp">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Tile.cpp">
       <Filter>Navigation</Filter>
@@ -162,7 +162,7 @@
       <Filter>Enums</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Player.h">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\PlayerAnimationState.h">
       <Filter>Enums</Filter>
@@ -186,10 +186,10 @@
       <Filter>UI Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ship.h">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Target.h">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Transform.h">
       <Filter>Components</Filter>
@@ -243,7 +243,7 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Plane.h">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\SoundType.h">
       <Filter>Enums</Filter>
@@ -270,10 +270,10 @@
       <Filter>IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\SpaceShip.h">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Obstacle.h">
-      <Filter>Navigation\Game Objects</Filter>
+      <Filter>Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Tile.h">
       <Filter>Navigation</Filter>
